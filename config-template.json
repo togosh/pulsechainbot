@@ -1,0 +1,18 @@
+{
+    "debug": true,
+    "port": 80,
+    "hostname": "YOUR_DOMAIN.COM",
+    "https": {
+        "cert": "/etc/letsencrypt/live/YOUR_DOMAIN.COM/fullchain.pem",
+        "key": "/etc/letsencrypt/live/YOUR_DOMAIN.COM/privkey.pem"
+    },
+    "email": {
+        "host": "smtp.gmail.com",
+        "port": 587,
+        "secure": false,
+        "user": "YOUR_EMAIL@gmail.com",
+        "pass": "YOUR_APP_PASSWORD",
+        "from": "PulseChainBot <YOUR_EMAIL@gmail.com>",
+        "to": "YOUR_EMAIL@gmail.com"
+    }
+}

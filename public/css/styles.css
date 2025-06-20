@@ -1,0 +1,191 @@
+/* --- Global Styles & Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --bg-dark: #12121f;
+    --bg-light: #1a1a2e;
+    --primary-accent: #e022ff;
+    --secondary-accent: #00bfff;
+    --text-light: #f0f0f0;
+    --text-medium: #a0a0b0;
+    --border-color: #33334f;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    margin: 0;
+    padding-top: 80px; /* Space for fixed navbar */
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--primary-accent);
+    font-weight: 700;
+}
+
+a {
+    color: var(--secondary-accent);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--primary-accent);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* --- Navbar & Footer --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+footer {
+    background-color: var(--bg-light);
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 40px;
+    color: var(--text-medium);
+}
+
+footer a {
+    margin: 0 10px;
+}
+
+/* --- Reusable Components --- */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--primary-accent), var(--secondary-accent));
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.2s;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    color: #fff;
+}
+
+.card {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 25px;
+    margin: 15px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+/* --- Page Specific Styles --- */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-medium);
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+#chatbot-container {
+    margin: 40px auto;
+    padding: 20px;
+    border: 2px solid var(--primary-accent);
+    border-radius: 10px;
+    background-color: var(--bg-light);
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#chatbot-container p {
+    color: var(--text-medium);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.code-block {
+    background-color: #0d0d1a;
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+}
+
+/* --- Contact Form --- */
+.contact-form {
+    max-width: 700px;
+    margin: 30px auto;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-medium);
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--text-light);
+}
+.form-submit-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+}
+.form-message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+.form-message.success {
+    background-color: #28a745;
+    color: #fff;
+}
+.form-message.error {
+    background-color: #dc3545;
+    color: #fff;
+}

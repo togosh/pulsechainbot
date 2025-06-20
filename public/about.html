@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How PulseChainBot Works</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header id="navbar-container"></header>
+
+    <main class="container">
+        <h1>How This Chatbot Works (Transparency Report)</h1>
+        <p>This page details exactly how the PulseChainBot works, including its core technology, the instructions it follows, and the data it uses. Transparency is key to building trust.</p>
+
+        <section class="card">
+            <h2>The Technology: Retrieval-Augmented Generation (RAG)</h2>
+            <p>This isn't just a generic AI. It uses a system called **Retrieval-Augmented Generation (RAG)**. Here’s a simple breakdown:</p>
+            <ol>
+                <li><strong>You Ask a Question:</strong> You type a question like "How do I bridge from Ethereum?".</li>
+                <li><strong>The Bot Searches Its Library:</strong> Before answering, the bot searches a private, curated library of documents (websites, guides, etc.) for the most relevant information related to your question. For this query, it would find sections from PulseChain.com about the bridge.</li>
+                <li><strong>The Bot Reads and Synthesizes:</strong> It reads the relevant snippets it found.</li>
+                <li><strong>The Bot Generates an Answer:</strong> Using a powerful AI model (GPT-4o-mini), it formulates an answer based *only* on the information it just read from its library. It then provides the source link for you to verify.</li>
+            </ol>
+            <p>This process prevents the bot from making things up or using outdated information from the general internet. It is restricted to its approved knowledge base.</p>
+        </section>
+
+        <section class="card">
+            <h2>The "Brain": Its Core AI Prompt</h2>
+            <p>This is the master instruction set given to the AI. It tells the bot how to behave, what its goals are, and what rules to follow. Here is the exact prompt used:</p>
+            <div class="code-block">
+You are a specialized AI support assistant for the PulseChain ecosystem. Your primary role is to be a reliable, neutral, and accurate source of information for the community. Your purpose is to help users learn how to safely and effectively:
+
+- Set up a wallet and add the PulseChain network.
+- Buy, sell, and swap tokens like PLS, PLSX, HEX, and INC.
+- Bridge assets to and from PulseChain.
+- Stake HEX.
+- Use core platforms like PulseX, PulseChain Bridge, and other community-vetted tools.
+
+Your goal is to make navigating the PulseChain ecosystem straightforward and accessible by providing clear, step-by-step instructions.
+
+**Instructions for Providing Answers:**
+- Tone: Maintain a helpful, clear, and neutral tone.
+- Source Grounding: Your answers MUST be based exclusively on the provided context. If the answer cannot be found, respond ONLY with "I don't know."
+- Citations: You must cite your sources with hyperlinks for any mentioned service. Always provide direct links for core dApps.
+- Formatting: Use Markdown for all formatting.
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>The Library: Its Data Sources</h2>
+            <p>The bot's knowledge is limited to the following sources. If it's not on this list, the bot doesn't know it.</p>
+            <ul>
+                <li>pulsechain.com</li>
+                <li>pulsex.com</li>
+                <li>hex.com</li>
+                <li>richardheart.cc</li>
+                <li>0xcoast.com</li>
+                <li>plsdashboard.link</li>
+                <li>gibs.finance</li>
+                <li>hexsearch.io</li>
+                <li>hexscout.com</li>
+                <li>pump.tires/how-it-works</li>
+                <li>HEX Staking Deep Dive (Google Doc)</li>
+                <li>HEX Contract in Laymans Terms (Google Doc)</li>
+                <li>And other community resources you've added...</li>
+            </ul>
+        </section>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="/contact.html" class="cta-button">Have Feedback or Ideas? Let Me Know!</a>
+        </div>
+    </main>
+
+    <footer id="footer"></footer>
+    <script src="/js/main.js"></script>
+</body>
+</html>
