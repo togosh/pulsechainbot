@@ -16,7 +16,7 @@ const app = express();
 
 // Security headers
 app.use((req, res, next) => {
-    res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self' https://cdn.ai12z.net; style-src 'self' https://cdn.ai12z.net; object-src 'none';");
+    res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self' https://cdn.ai12z.net; style-src 'self' https://cdn.ai12z.net https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; object-src 'none';");
     res.setHeader('X-Content-Type-Options', 'nosniff');
     res.setHeader('X-Frame-Options', 'DENY');
     res.setHeader('X-XSS-Protection', '1; mode=block');
