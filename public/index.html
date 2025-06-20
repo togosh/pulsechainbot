@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PulseChainBot - Your AI Support Assistant</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/copy.css">
     <meta name="description" content="An AI-powered chatbot to help you navigate the PulseChain ecosystem. Ask questions about wallets, bridging, swapping, and more.">
+
+    <script type="module" src="https:/cdn.ai12z.net/pkg/ai12z@latest/dist/esm/library.js"></script>
+    <link rel="stylesheet" href="https:/cdn.ai12z.net/pkg/ai12z@latest/dist/library/library.css" />
 </head>
 <body>
     <header id="navbar-container"></header>
@@ -18,15 +22,12 @@
             </div>
         </section>
 
-        <section class="container">
-            <div id="chatbot-container" class="card">
-                <!-- 
-                *************************************************
-                *** PASTE YOUR AI12Z EMBED CODE HERE ***
-                *************************************************
-                This div will be replaced by your chatbot embed script.
-                -->
-                <p>Chatbot is loading...</p>
+        <div style="text-align: center; margin-bottom: 20px;">
+            <a href="/contact.html" class="cta-button">Have Feedback or Ideas? Let Me Know!</a>
+        </div>
+
+        <section class="container" style="display:none">
+            <div id="chatbot-container" class="card">   
             </div>
         </section>
 
@@ -46,27 +47,33 @@
         <section class="container">
             <h2>Support This Community Project</h2>
             <div class="card">
-                <p>This chatbot is a community project aimed at making PulseChain easier to navigate for everyone. Maintaining it and running the AI models (like GPT-4o-mini) has costs.</p>
+                <p>This chatbot is a community project aimed at making PulseChain easier to navigate for everyone.</p>
+                <p>Maintaining it and running the AI models (like GPT-4o-mini) has costs.</p>
                 <p>If you find this tool helpful, please consider sending a donation. Your support helps keep the project alive and improving!</p>
-                <p><strong>PulseChain Donation Address:</strong></p>
-                <div class="code-block" style="text-align: center; font-size: 1.1em;">
-                    YOUR_PULSECHAIN_WALLET_ADDRESS_HERE
-                </div>
+                <p style="margin-top: 30px;"><strong>PulseChain Donation Address:</strong></p>
+                <div class="code-block" style="font-size: 1.1em; cursor: pointer;" onclick="copyAddress('0xF6272bC4baB4e8fcD99E34B73eB4Fc3e3A406Fb9')">0xF6272bC4baB4e8fcD99E34B73eB4Fc3e3A406Fb9</div>
+                <div id="copy-success">Copied!</div>
             </div>
         </section>
 
         <section class="container">
             <h2>Other Projects by Me</h2>
             <div class="info-grid">
-                <div class="card"><h3>HEXPostcards.com</h3><p>A project for creating and sharing HEX-themed digital postcards.</p><a href="https://hexpostcards.com" target="_blank" class="cta-button" style="background: #333;">Visit Site</a></div>
-                <div class="card"><h3>PulseChainRamp.com</h3><p>A resource focused on on-ramping solutions for the PulseChain ecosystem.</p><a href="https://pulsechainramp.com" target="_blank" class="cta-button" style="background: #333;">Visit Site</a></div>
-                <div class="card"><h3>LIFTfintech.org</h3><p>An educational non-profit focused on financial technology literacy.</p><a href="https://liftfintech.org" target="_blank" class="cta-button" style="background: #333;">Visit Site</a></div>
+                <div class="card"><h3>HEXpostcards.com</h3><p>A volunteer project for mailing HEX & PulseChain postcards to the wealthiest households in the world.</p><a href="https://hexpostcards.com" target="_blank" class="cta-button" style="background: #333;">Visit Site</a></div>
+                <div class="card"><h3>PulseChainRamp.com</h3><p>A resource for on-ramping to the PulseChain ecosystem, extra 0.5% fee goes to HEXpostcards to purchase more direct mail.</p><a href="https://pulsechainramp.com" target="_blank" class="cta-button" style="background: #333;">Visit Site</a></div>
+                <div class="card"><h3>LIFTfintech.org</h3><p>An educational non-profit focused on financial technology literacy. Applying for 501(c)(3) status.</p><a href="https://liftfintech.org" target="_blank" class="cta-button" style="background: #333;">Visit Site</a></div>
             </div>
         </section>
 
+        <div style="text-align: center; margin-bottom: 20px;">
+            <a href="/contact.html" class="cta-button">Feedback Form</a>
+        </div>
+
+        <ai12z-bot data-key="b7118ab5ccc55136ab357c3820155d4cd024d6ed1bc870c1bb536aff747833d5"></ai12z-bot>
     </main>
 
     <footer id="footer"></footer>
     <script src="/js/main.js"></script>
+    <script src="/js/copy-address.js"></script>
 </body>
 </html>

@@ -1,0 +1,37 @@
+#copy-success {
+    display: none;
+    bottom: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+    z-index: 1000;
+    text-align: center;
+}
+
+#copy-success.copy-notification {
+    display: block;
+    
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translate(-50%, 100px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutDown {
+    from {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+    to {
+        transform: translate(-50%, 100px);
+        opacity: 0;
+    }
+}

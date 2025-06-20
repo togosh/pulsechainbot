@@ -59,7 +59,16 @@ function loadComponent(url, elementId) {
                     if (yearSpan) yearSpan.textContent = new Date().getFullYear();
                 }
                 if (elementId === 'navbar-container') {
-                    // Add any navbar-specific JS logic here if needed
+                    const hamburger = document.querySelector('.hamburger-menu');
+                    const navLinks = document.getElementById('nav-links');
+
+                    if (hamburger && navLinks) {
+                        hamburger.addEventListener('click', () => {
+                            navLinks.classList.toggle('active');
+                            const isExpanded = navLinks.classList.contains('active');
+                            hamburger.setAttribute('aria-expanded', isExpanded);
+                        });
+                    }
                 }
             })
             .catch(error => console.error(`Failed to load ${url}:`, error));
