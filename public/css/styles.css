@@ -6,7 +6,7 @@
     --bg-light: #1a1a2e;
     --primary-accent: #e022ff;
     --secondary-accent: #00bfff;
-    --text-light: #f0f0f0;
+    --text-white: #f0f0f0;
     --text-medium: #a0a0b0;
     --border-color: #33334f;
 }
@@ -14,7 +14,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--bg-dark);
-    color: var(--text-light);
+    color: var(--text-white);
     margin: 0;
     padding-top: 80px; /* Space for fixed navbar */
     line-height: 1.6;
@@ -79,7 +79,7 @@ header {
 
 .nav-links a {
     margin: 0 15px;
-    color: var(--text-light);
+    color: var(--text-white);
 }
 
 .hamburger-menu {
@@ -94,7 +94,7 @@ header {
 .hamburger-bar {
     width: 25px;
     height: 3px;
-    background-color: var(--text-light);
+    background-color: var(--text-white);
     margin: 4px 0;
     transition: 0.4s;
 }
@@ -246,7 +246,7 @@ footer a {
     background-color: var(--bg-dark);
     border: 1px solid var(--border-color);
     border-radius: 5px;
-    color: var(--text-light);
+    color: var(--text-white);
 }
 .form-submit-btn {
     width: 100%;
